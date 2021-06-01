@@ -1,0 +1,77 @@
+/* css */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  display: grid;
+  height: 100%;
+  background-size: cover;
+  place-items: center;
+  background-image: url("earth1.png");
+  background-repeat: no-repeat;
+}
+
+/*border background */
+.effect .clock {
+  background: rgba(160, 165, 226, 0.52);
+  height: 200px;
+  width: 500px;
+  text-align: center;
+  border-radius: 100px;
+}
+
+/*TIME numbers + numbers animation(webkit) */
+.effect .clock #localTime {
+  line-height: 200px;
+  font-size: 60px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  background-color: #20bf55;
+  background-image: linear-gradient(315deg, #20bf55 0%, #01baef 74%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate 1.8s linear infinite;
+}
+
+/*ANIMATION*/
+@keyframes animate {
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+/*hover effect*/
+.effect .clock :hover {
+  justify-content: center;
+  margin: auto;
+  padding: auto;
+  background-color: transparent;
+  width: auto;
+  height: auto;
+  border-radius: 200px;
+  box-shadow: -9px -9px 30px 3px rgb(246, 129, 255),
+    9px 9px 30px 3px rgb(0, 255, 241);
+}
+
+.currentDate {
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 10px;
+  border-radius: 100px;
+  background-color: #20bf55;
+  background-image: linear-gradient(315deg, #20bf55 0%, #01baef 74%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate 1.8s linear infinite;
+}
+
+/*REFERENCES
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
+https://www.w3schools.com/jsref/jsref_obj_date.asp
+https://www.eggradients.com/linear-gradients
+https://codingnepalweb.com/
+https://www.w3schools.com/css/css3_animations.asp */
